@@ -1,4 +1,4 @@
-# Happy Thoughts
+# Week 11: Happy Thoughts
 
 Replace this readme with your own information about your project.
 
