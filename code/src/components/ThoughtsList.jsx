@@ -11,7 +11,7 @@ const ThoughtsList = (props) => {
   // pourquoi 2 fois???
   // console.table(thoughtsList)
 
-  const fetchThoughts = () => {
+  useEffect(() => {
     setIsLoading(true)
     fetch("https://happy-thoughts-technigo.herokuapp.com/thoughts")
       .then((res) => res.json())
@@ -20,11 +20,7 @@ const ThoughtsList = (props) => {
       })
       .catch((error) => console.error(error))
       .finally(() => setIsLoading(false))
-  }
-
-  useEffect(() => {
-    fetchThoughts()
-  }, [])
+  }, [setThoughtsList])
 
   if (isLoading === true) {
     return <div>Loading...</div>
