@@ -8,6 +8,75 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Source Code Pro", monospace;
+}
+
+.main-box {
+  margin: 20px auto;
+  width: 350px;
+}
+
+.new-thought-box {
+  background-color: #f2f0f0;
+}
+
+.new-thought-box,
+.old-thought-box {
+  border: 1px solid #000;
+  box-shadow: 7px 7px;
+  padding: 20px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.old-thought-message {
+  font-family: 'Source Code Pro', monospace;
+  overflow-wrap: break-word;
+}
+
+.old-thought-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-thought-box button,
+.liked,
+.not-liked {
+  height: 50px;
+  border: none;
+}
+
+.new-thought-box button {
+  width: 200px;
+  border-radius: 25px;
+}
+
+.new-thought-box button span {
+  font-size: 20px;
+
+}
+
+
+.liked,
+.not-liked {
+  width: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+
+}
+
+.new-thought-box button:enabled,
+.liked {
+  background-color: #ffaead;
+}
+
+.new-thought-box button:disabled,
+.not-liked {
+  background-color: #eaeaea;
+}
+
+textarea {
+  resize: none;
+  width: 300px;
 }
