@@ -1,5 +1,9 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -12,12 +16,16 @@ code {
 }
 
 .main-box {
-  margin: 20px auto;
+  margin: 0 auto;
   width: 350px;
 }
 
 .new-thought-box {
   background-color: #f2f0f0;
+}
+
+.old-thought-box {
+  background-color: #fff;
 }
 
 .new-thought-box,
@@ -26,7 +34,7 @@ code {
   box-shadow: 7px 7px;
   padding: 20px;
   width: auto;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .old-thought-message {
@@ -48,35 +56,69 @@ code {
 }
 
 .new-thought-box button {
-  width: 200px;
+  width: 225px;
   border-radius: 25px;
 }
 
-.new-thought-box button span {
+.new-thought-button-heart {
   font-size: 20px;
 
 }
 
+.like-box {
+  display: flex;
+  align-items: center;
+}
 
-.liked,
-.not-liked {
+.like-button {
   width: 50px;
+  height: 50px;
   border-radius: 50%;
   font-size: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
+.like-text {
+  padding-left: 10px;
 }
 
 .new-thought-box button:enabled,
-.liked {
+.like-button.liked {
   background-color: #ffaead;
 }
 
 .new-thought-box button:disabled,
-.not-liked {
+.like-button.not-liked {
   background-color: #eaeaea;
 }
 
-textarea {
-  resize: none;
+.new-thought-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.new-thought-button-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.new-thought-button-text {
+  font-weight: bold;
+}
+
+.new-thought-input {
+  resize: vertical;
+  min-height: 40px;
   width: 300px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.new-thought-input-length.wrong {
+  color: red;
 }

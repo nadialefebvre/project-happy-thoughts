@@ -1,17 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import ThoughtsList from './components/ThoughtsList'
-import ThoughtForm from './components/ThoughtForm'
+import Page from './components/Page'
 
 const App = () => {
 
-  const [thoughtsList, setThoughtsList] = useState([])
-
   return (
-    <main className='main-box'>
-      <ThoughtForm setThoughtsList={setThoughtsList} />
-      <ThoughtsList thoughtsList={thoughtsList} setThoughtsList={setThoughtsList} />
-    </main>
+      <Page />
   )
 }
 
