@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import NewThoughtForm from './NewThoughtForm'
-import ThoughtItem from './ThoughtItem'
+import SendThoughtForm from './SendThoughtForm'
+import ThoughtsList from './ThoughtsList'
 
 const API_URL = 'https://happy-thoughts-technigo.herokuapp.com/thoughts'
 
@@ -9,16 +9,16 @@ const Page = () => {
   const [thoughts, setThoughts] = useState([])
   const [thoughtInput, setThoughtInput] = useState('')
 
-  useEffect(() => {
-    fetchThoughts()
-  }, [])
-
   const fetchThoughts = () => {
     fetch(API_URL)
       .then(res => res.json())
       .then(data => setThoughts(data))
       .catch(error => console.error(error))
   }
+
+  useEffect(() => {
+    fetchThoughts()
+  }, [])
 
   const handleThoughtSubmit = e => {
     e.preventDefault()
@@ -46,28 +46,14 @@ const Page = () => {
 
   return (
     <main className="main-box">
-      <NewThoughtForm
+      <SendThoughtForm
         thoughtInput={thoughtInput}
         onThoughtSubmit={handleThoughtSubmit}
         setThoughtInput={setThoughtInput}
       />
-
-      {thoughts.map(thought => (
-        <ThoughtItem
-          key={thought._id}
-          thought={thought}
-          onLikeSubmit={handleLikeSubmit}
-        />
-      ))}
+      <ThoughtsList thoughts={thoughts} onLikeSubmit={handleLikeSubmit} />
     </main>
   )
 }
 
 export default Page
-
-/*
-  //   const [isLoading, setIsLoading] = useState(false)
-    // setIsLoading(true)
-    //   .finally(() => setIsLoading(false))
-          //   isLoading={isLoading}
-*/
