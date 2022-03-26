@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import smoothscroll from 'smoothscroll-polyfill'
 
 import Header from './Header'
 import ThoughtsList from './ThoughtsList'
 import Footer from './Footer'
+
+smoothscroll.polyfill()
 
 const API_URL = 'https://happy-thoughts-technigo.herokuapp.com/thoughts'
 
