@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-import SendThoughtForm from './SendThoughtForm'
+import Header from './Header'
 import ThoughtsList from './ThoughtsList'
+import Footer from './Footer'
 
 const API_URL = 'https://happy-thoughts-technigo.herokuapp.com/thoughts'
 
@@ -16,9 +17,7 @@ const Page = () => {
       .catch(error => console.error(error))
   }
 
-  useEffect(() => {
-    fetchThoughts()
-  }, [])
+  useEffect(() => fetchThoughts(), [])
 
   const handleThoughtSubmit = e => {
     e.preventDefault()
@@ -33,6 +32,12 @@ const Page = () => {
         fetchThoughts()
         setThoughtInput('')
       })
+      .finally(
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        })
+      )
   }
 
   const handleLikeSubmit = thoughtId => {
@@ -46,12 +51,13 @@ const Page = () => {
 
   return (
     <main className="main-box">
-      <SendThoughtForm
+      <Header
         thoughtInput={thoughtInput}
         onThoughtSubmit={handleThoughtSubmit}
         setThoughtInput={setThoughtInput}
       />
       <ThoughtsList thoughts={thoughts} onLikeSubmit={handleLikeSubmit} />
+      <Footer />
     </main>
   )
 }

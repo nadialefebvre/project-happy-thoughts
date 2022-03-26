@@ -1,3 +1,14 @@
+:root {
+  --dark-grey: #808080;
+  --medium-grey: #d9d9d9;
+  --light-grey: #eaeaea;
+  --dark-pink: #ff9b99;
+  --medium-pink: #ffcccc;
+  --light-pink: #fff0f0;
+  --white: #fff;
+  --red: #ff0000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +20,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffcccc;
+  background-color: var(--medium-pink);
+  scroll-behavior: smooth;
 }
 
 code {
@@ -25,14 +37,31 @@ button {
 
 .main-box {
   margin: 20px auto;
-  /* width: 350px; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.header {
+  background-color: var(--medium-pink);
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  padding-top: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-family: 'Source Code Pro', monospace;
+  text-align: center;
+  letter-spacing: 0.15em;
+  padding-bottom: 20px;
+}
+
 .input-box {
-  background-color: #f2f0f0;
+  background-color: var(--light-grey);
+  width: 300px;
+  margin: 10px 0 7px 0;
 }
 
 .input-box,
@@ -40,14 +69,12 @@ button {
   border: 1px solid #000;
   box-shadow: 7px 7px;
   padding: 20px;
-  width: 350px;
-  margin: 10px 0;
 }
 
 .input-message {
   resize: vertical;
-  min-height: 40px;
-  width: 300px;
+  min-height: 60px;
+  width: 290px;
   padding: 5px;
   margin-top: 20px;
 }
@@ -68,19 +95,17 @@ button {
 
 .input-button:enabled,
 .thought-like-button.liked {
-  background-color: #ff9b99;
+  background-color: var(--dark-pink);
 }
 
 .input-button:disabled {
   cursor: not-allowed;
-  background-color: #d9d9d9;
+  background-color: var(--medium-grey);
 }
 
 .emoji {
   font-size: 20px;
 }
-
-
 
 .input-button-text {
   font-weight: bold;
@@ -89,16 +114,18 @@ button {
 .input-message-length,
 .thought-like-text,
 .thought-date {
-  color: grey;
+  color: var(--dark-grey);
   font-size: 12px;
 }
 
 .input-message-length.wrong {
-  color: red;
+  color: var(--red);
 }
 
 .thought-box {
-  background-color: #fff;
+  background-color: var(--white);
+  width: 275px;
+  margin: 20px 0;
 }
 
 .thought-message {
@@ -126,11 +153,22 @@ button {
 }
 
 .thought-like-button.not-liked {
-  background-color: #eaeaea;
+  background-color: var(--light-grey);
 }
 
 .thought-like-text {
   padding-left: 10px;
+}
+
+
+a {
+  color: inherit;
+  font-weight: bold;
+}
+
+.copyright {
+  color: var(--dark-grey);
+  padding: 20px 0 10px 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -158,25 +196,21 @@ button {
     width: 600px;
   }
 
+  .input-message {
+    width: 590px;
+  }
+
   .thought-box {
     width: 350px;
   }
 
   .thought-box:nth-child(2n) {
-    background-color: #fff0f0;
+    background-color: var(--light-pink);
     align-self: flex-start;
   }
 
   .thought-box:nth-child(2n + 1) {
-    background-color: #fff;
+    background-color: var(--white);
     align-self: flex-end;
   }
-
-
-
-
-  
 }
-
-
-

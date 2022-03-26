@@ -1,5 +1,5 @@
 import React from 'react'
-import { formatDistanceToNowStrict } from 'date-fns'
+import { formatDistanceToNow } from 'date-fns'
 
 import Emoji from './Emoji'
 
@@ -21,7 +21,7 @@ const ThoughtsList = props => {
               <span className="thought-like-text"> x {thought.hearts}</span>
             </div>
             <span className='thought-date'>
-              {formatDistanceToNowStrict(new Date(thought.createdAt), {
+              {formatDistanceToNow(new Date(thought.createdAt), {
                 addSuffix: true,
               })}
             </span>
