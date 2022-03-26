@@ -2,8 +2,8 @@ import React from 'react'
 
 import SendThoughtForm from './SendThoughtForm'
 
-const Header = (props) => {
-    const { onThoughtSubmit, thoughtInput, setThoughtInput } = props
+const Header = props => {
+  const { onThoughtSubmit, thoughtInput, setThoughtInput } = props
 
   return (
     <header className="header">

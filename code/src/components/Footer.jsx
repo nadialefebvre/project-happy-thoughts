@@ -9,7 +9,7 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
         title="Portfolio Nadia Lefebvre"
-        >
+      >
         Nadia Lefebvre
       </a>
     </p>

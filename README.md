@@ -1,13 +1,13 @@
 # Week 11: Happy Thoughts
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project was to practice React state and effect hooks by fetching and posting data to an API, in a Twitter-like but more positive app.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The structure was quite easy to set up. The project itself was simple but I struggled on too many details, like finding a way to refresh the likes (it was an issue about structure). If I had more time, I would have found an elegant way to add a loading state.
+
+I'm happy with what my app looks like both on mobile and desktop. Tiny details make all the difference.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Project deployed here: [Happy Thoughts 2022](https://happy-thoughts2022.netlify.app/)
