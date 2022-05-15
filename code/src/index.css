@@ -110,6 +110,7 @@ button {
 
 .input-message-length,
 .thought-like-text,
+.thought-username,
 .thought-date {
   color: var(--dark-grey);
   font-size: 12px;

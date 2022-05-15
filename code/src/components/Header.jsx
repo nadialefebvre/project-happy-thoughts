@@ -3,7 +3,13 @@ import React from 'react'
 import SendThoughtForm from './SendThoughtForm'
 
 const Header = props => {
-  const { onThoughtSubmit, thoughtInput, setThoughtInput } = props
+  const {
+    onThoughtSubmit,
+    thoughtInput,
+    setThoughtInput,
+    usernameInput,
+    setUsernameInput,
+  } = props
 
   return (
     <header className="header">
@@ -12,6 +18,8 @@ const Header = props => {
         thoughtInput={thoughtInput}
         onThoughtSubmit={onThoughtSubmit}
         setThoughtInput={setThoughtInput}
+        usernameInput={usernameInput}
+        setUsernameInput={setUsernameInput}
       />
     </header>
   )

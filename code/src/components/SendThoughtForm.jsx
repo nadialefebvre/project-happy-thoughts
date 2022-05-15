@@ -3,7 +3,13 @@ import React from 'react'
 import Emoji from './Emoji'
 
 const SendThoughtForm = props => {
-  const { onThoughtSubmit, thoughtInput, setThoughtInput } = props
+  const {
+    onThoughtSubmit,
+    thoughtInput,
+    setThoughtInput,
+    usernameInput,
+    setUsernameInput,
+  } = props
 
   let classToUse =
     thoughtInput.length !== 0 && thoughtInput.length < 5
@@ -21,14 +27,23 @@ const SendThoughtForm = props => {
           maxLength="140"
           onChange={e => setThoughtInput(e.target.value)}
           placeholder="Write 5 to 140 characters"
-          value={thoughtInput}
-        ></textarea>
+          value={thoughtInput}></textarea>
+        <label className="thought-username" htmlFor="inputUsername">
+          by:{' '}
+        </label>
+        <input
+          className="thought-username"
+          id="inputUsername"
+          maxLength="15"
+          onChange={e => setUsernameInput(e.target.value)}
+          type="text"
+          value={usernameInput}
+        />
         <div className="input-submit-box">
           <button
             className="input-button"
             disabled={thoughtInput.length < 5}
-            type="submit"
-          >
+            type="submit">
             <Emoji symbol="❤️" label="heart" />
             <span className="input-button-text">Send Happy Thought</span>
             <Emoji symbol="❤️" label="heart" />

@@ -7,11 +7,14 @@ import Footer from './Footer'
 
 smoothscroll.polyfill()
 
-const API_URL = 'https://happy-thoughts-technigo.herokuapp.com/thoughts'
+// const API_URL = 'https://happy-thoughts-technigo.herokuapp.com/thoughts'
+// new URL of my own API
+const API_URL = 'https://happy-thoughts-by-nadia.herokuapp.com/thoughts'
 
 const Page = () => {
   const [thoughts, setThoughts] = useState([])
   const [thoughtInput, setThoughtInput] = useState('')
+  const [usernameInput, setUsernameInput] = useState('')
 
   const fetchThoughts = () => {
     fetch(API_URL)
@@ -27,13 +30,14 @@ const Page = () => {
     const options = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: thoughtInput }),
+      body: JSON.stringify({ message: thoughtInput, username: usernameInput }),
     }
     fetch(API_URL, options)
       .then(res => res.json())
       .then(() => {
         fetchThoughts()
         setThoughtInput('')
+        setUsernameInput('')
       })
       .finally(
         window.scrollTo({
@@ -58,6 +62,8 @@ const Page = () => {
         thoughtInput={thoughtInput}
         onThoughtSubmit={handleThoughtSubmit}
         setThoughtInput={setThoughtInput}
+        usernameInput={usernameInput}
+        setUsernameInput={setUsernameInput}
       />
       <ThoughtsList thoughts={thoughts} onLikeSubmit={handleLikeSubmit} />
       <Footer />

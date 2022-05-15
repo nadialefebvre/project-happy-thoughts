@@ -10,15 +10,17 @@ const ThoughtsList = props => {
     <>
       {thoughts.map(thought => (
         <article key={thought._id} className="thought-box">
-          <p className="thought-message">{thought.message}</p>
+          <p className="thought-message">
+            {thought.message}
+            <span className="thought-username"> /{thought.username}</span>
+          </p>
           <div className="thought-details-box">
             <div className="thought-like-box">
               <button
                 className={`thought-like-button ${
                   thought.hearts === 0 ? 'not-liked' : 'liked'
                 }`}
-                onClick={() => onLikeSubmit(thought._id)}
-              >
+                onClick={() => onLikeSubmit(thought._id)}>
                 <p>
                   <Emoji symbol="❤️" label="heart" />
                 </p>
