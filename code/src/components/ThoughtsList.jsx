@@ -1,10 +1,15 @@
 import React from 'react'
 import { formatDistanceToNow } from 'date-fns'
 
+import Loader from './Loader'
 import Emoji from './Emoji'
 
 const ThoughtsList = props => {
-  const { thoughts, onLikeSubmit } = props
+  const { thoughts, onLikeSubmit, isLoading } = props
+
+  if (isLoading) {
+    return <Loader />
+  }
 
   return (
     <>

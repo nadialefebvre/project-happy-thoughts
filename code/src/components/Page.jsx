@@ -15,11 +15,16 @@ const Page = () => {
   const [thoughts, setThoughts] = useState([])
   const [thoughtInput, setThoughtInput] = useState('')
   const [usernameInput, setUsernameInput] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
 
   const fetchThoughts = () => {
+    setIsLoading(true)
     fetch(API_URL)
       .then(res => res.json())
-      .then(data => setThoughts(data))
+      .then(data => {
+        setThoughts(data)
+        setIsLoading(false)
+      })
       .catch(error => console.error(error))
   }
 
@@ -65,7 +70,11 @@ const Page = () => {
         usernameInput={usernameInput}
         setUsernameInput={setUsernameInput}
       />
-      <ThoughtsList thoughts={thoughts} onLikeSubmit={handleLikeSubmit} />
+      <ThoughtsList
+        thoughts={thoughts}
+        onLikeSubmit={handleLikeSubmit}
+        isLoading={isLoading}
+      />
       <Footer />
     </main>
   )
