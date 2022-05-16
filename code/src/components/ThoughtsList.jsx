@@ -17,7 +17,10 @@ const ThoughtsList = props => {
         <article key={thought._id} className="thought-box">
           <p className="thought-message">
             {thought.message}
-            <span className="thought-username"> /{thought.username}</span>
+            <span className="thought-username">
+              {' '}
+              /{thought.username !== '' ? thought.username : 'anonymous'}
+            </span>
           </p>
           <div className="thought-details-box">
             <div className="thought-like-box">

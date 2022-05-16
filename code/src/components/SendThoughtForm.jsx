@@ -12,7 +12,7 @@ const SendThoughtForm = props => {
   } = props
 
   let classToUse =
-    thoughtInput.length !== 0 && thoughtInput.length < 5
+    thoughtInput.length !== 0 && thoughtInput.trim().length < 5
       ? 'input-message-length wrong'
       : 'input-message-length'
 
@@ -42,13 +42,13 @@ const SendThoughtForm = props => {
         <div className="input-submit-box">
           <button
             className="input-button"
-            disabled={thoughtInput.length < 5}
+            disabled={thoughtInput.trim().length < 5}
             type="submit">
             <Emoji symbol="❤️" label="heart" />
             <span className="input-button-text">Send Happy Thought</span>
             <Emoji symbol="❤️" label="heart" />
           </button>
-          <div className={classToUse}>{thoughtInput.length}/140</div>
+          <div className={classToUse}>{thoughtInput.trim().length}/140</div>
         </div>
       </form>
     </article>
