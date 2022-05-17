@@ -14,6 +14,6 @@ Project deployed here: [Happy Thoughts 2022](https://happy-thoughts2022.netlify.
 
 **UPDATE**
 
-This project has been updated with my on API built in week 19's project, which can be found here: 
+This project has been updated with my own API built in week 19's project, which can be found here: 
 * repository: (https://github.com/nadialefebvre/project-happy-thoughts-api)
 * deployed site: (https://happy-thoughts-by-nadia.herokuapp.com)
