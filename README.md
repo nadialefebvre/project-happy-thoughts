@@ -1,5 +1,5 @@
 # Weekly project for Technigo's bootcamp, week 11
-Task: build a fullstack website
+Task: build an app like Twitter
 
 Tech: HTML, CSS, JavaScript, React, API
 
