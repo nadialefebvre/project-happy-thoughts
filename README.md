@@ -1,3 +1,10 @@
+# Weekly project for Technigo's bootcamp, week 11
+Task: build a fullstack website
+
+Tech: HTML, CSS, JavaScript, React, API
+
+----
+
 # Week 11: Happy Thoughts
 
 This week's project was to practice React state and effect hooks by fetching and posting data to an API, in a Twitter-like but more positive app.
