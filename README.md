@@ -1,4 +1,6 @@
-# Week 11: Happy Thoughts
+# Project Happy Thoughts 2022
+
+Weekly project for Technigo's bootcamp, week 11: build an app like Twitter
 
 This week's project was to practice React state and effect hooks by fetching and posting data to an API, in a Twitter-like but more positive app.
 
