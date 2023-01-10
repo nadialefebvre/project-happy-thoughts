@@ -11,7 +11,7 @@ smoothscroll.polyfill()
 // new URL of my own API (old with Heroku)
 // const API_URL = 'https://happy-thoughts-by-nadia.herokuapp.com/thoughts'
 // new URL of my own API (new with Google Cloud)
-const API_URL = 'https://happy-thoughts-by-nadia-k4dsiyy6ga-uc.a.run.app/thoughts'
+const API_URL = 'https://happy-thoughts-by-nadia-kijk33idxa-lz.a.run.app/thoughts'
 
 const Page = () => {
   const [thoughts, setThoughts] = useState([])
