@@ -18,4 +18,4 @@ Project deployed here: [Happy Thoughts 2022](https://happy-thoughts2022.netlify.
 
 This project has been updated with my own API built in week 19's project, which can be found here: 
 * repository: (https://github.com/nadialefebvre/project-happy-thoughts-api)
-* deployed site: (https://happy-thoughts-by-nadia-k4dsiyy6ga-uc.a.run.app/)
+* deployed site: (https://happy-thoughts-by-nadia-kijk33idxa-lz.a.run.app/thoughts)
